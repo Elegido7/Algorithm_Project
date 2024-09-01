@@ -10,7 +10,7 @@ function analyzeAndRead(sentence) {
   // Loop through each character in the sentence
   for (let i = 0; i < sentence.length; i++) {
     let char = sentence[i];
-    lengthOfSentence++; // Counting the characters in the sentence till the end.
+    lengthOfSentence++; // Counting the characters in the sentence looping until the last character is counted.
 
     // Switch case to handle different types of characters
     switch (true) {
@@ -19,12 +19,12 @@ function analyzeAndRead(sentence) {
         numberOfVowels++;
         break;
 
-      // Check if the character is a space followed by a non-space (i.e., end of a word)
+      // Check if the character is a space followed by a non-space (i.e. call Dennis)
       case char === ' ' && i > 0 && sentence[i - 1] !== ' ':
         numberOfWords++;
         break;
 
-      // Default case to handle other characters (does nothing special here)
+      // Default case to handle other characters.
       default:
         break;
     }
